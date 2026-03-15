@@ -36,30 +36,48 @@ public class Calculator {
 
             int choice = sc.nextInt();
 
-            switch (choice) {
+            switch(choice) {
+
                 case 1:
                     System.out.print("Enter number: ");
                     double num = sc.nextDouble();
-                    System.out.println("Result: " + sqrt(num));
+
+                    if(num < 0) {
+                        System.out.println("Result: NaN (Square root of negative number)");
+                    } else {
+                        System.out.println("Result: " + sqrt(num));
+                    }
                     break;
 
                 case 2:
                     System.out.print("Enter number: ");
                     int n = sc.nextInt();
-                    System.out.println("Result: " + factorial(n));
+
+                    if(n < 0) {
+                        System.out.println("Result: NaN (Factorial of negative number)");
+                    } else {
+                        System.out.println("Result: " + factorial(n));
+                    }
                     break;
 
                 case 3:
                     System.out.print("Enter number: ");
                     double l = sc.nextDouble();
-                    System.out.println("Result: " + ln(l));
+
+                    if(l <= 0) {
+                        System.out.println("Result: NaN (Log undefined for <=0)");
+                    } else {
+                        System.out.println("Result: " + ln(l));
+                    }
                     break;
 
                 case 4:
                     System.out.print("Enter base: ");
                     double base = sc.nextDouble();
+
                     System.out.print("Enter power: ");
                     double p = sc.nextDouble();
+
                     System.out.println("Result: " + power(base, p));
                     break;
 

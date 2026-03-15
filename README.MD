@@ -14,7 +14,7 @@ The calculator supports the following operations:
 
 • Square Root → √x  
 • Factorial → x!  
-• Natural Logarithm→ ln(x)  
+• Natural Log ln(x)  
 • Power Function → x^b
 
 The application runs through a **command-line interface**.
